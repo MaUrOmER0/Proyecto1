@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Clásico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario con controles clásicos</h1>
+
+        <!-- Formulario -->
+        <form id="classicForm">
+            <!-- Cajas de texto -->
+            <fieldset>
+                <legend>Cajas de texto</legend>
+                <label for="campoTexto">Campo de texto:</label>
+                <input type="text" id="campoTexto" placeholder="Escribe algo..."><br><br>
+
+                <label for="areaTexto">Área de texto:</label>
+                <textarea id="areaTexto" rows="4" placeholder="Texto multilinea"></textarea><br><br>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" placeholder="Contraseña"><br><br>
+            </fieldset>
+
+            <!-- Controles de selección -->
+            <fieldset>
+                <legend>Controles de selección</legend>
+                <label for="listaSimple">Lista de selección simple (tipo combo):</label>
+                <select id="listaSimple">
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Roedor">Roedor</option>
+                </select><br><br>
+
+                <label for="listaMultiple">Lista de selección múltiple (ctrl+click para elegir varios):</label>
+                <select id="listaMultiple" multiple>
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Roedor">Roedor</option>
+                    <option value="Lobo">Lobo</option>
+                    <option value="León">León</option>
+                </select><br><br>
+
+                <label>Lista de botones de radio:</label><br>
+                <input type="radio" name="animalRadio" value="Perro"> Perro
+                <input type="radio" name="animalRadio" value="Gato"> Gato
+                <input type="radio" name="animalRadio" value="Roedor"> Roedor<br><br>
+
+                <label>Lista de cajas de verificación (checkbox):</label><br>
+                <input type="checkbox" name="tamaño" value="Chico"> Chico
+                <input type="checkbox" name="tamaño" value="Mediano"> Mediano
+                <input type="checkbox" name="tamaño" value="Grande"> Grande
+            </fieldset>
+
+            <!-- Botones -->
+            <fieldset>
+                <legend>Botones</legend>
+                <button type="button" onclick="enviarInformacion()">Enviar información</button>
+                <button type="reset">Borrar información</button>
+                <button type="button" onclick="mostrarAlerta()">Botón</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

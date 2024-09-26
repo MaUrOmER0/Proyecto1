@@ -1,0 +1,175 @@
+/* Reseteo de márgenes y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #66cccc;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #004D4D;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+header img {
+    width: 60px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Estilo para la navegación */
+nav {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #005353;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #334d4d;
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+    float: left;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.content {
+    float: left;
+    width: 75%;
+    padding: 20px;
+    background-color: white;
+    min-height: calc(100vh - 120px);
+    overflow-y: scroll;
+}
+
+/* Mosaico multimedia usando CSS Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: auto;  /* Las filas se ajustan automáticamente */
+    gap: 20px; /* Espacio entre los elementos */
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+img, video, audio {
+    width: 100%;
+    height: auto;
+}
+
+/* Pie de página */
+/* Flexbox para las cajitas de alumnos */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #004D4D;
+    padding: 10px;
+}
+
+.flex-item {
+    background-color: #66cccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+
+footer {
+    clear: both;
+    background-color: #004D4D;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* En pantallas pequeñas, una columna */
+        grid-template-rows: auto;   /* Las filas se ajustan automáticamente */
+    }
+
+    .sidebar {
+        width: 100%;
+        float: none;
+    }
+
+    .content {
+        width: 100%;
+        float: none;
+    }
+}
